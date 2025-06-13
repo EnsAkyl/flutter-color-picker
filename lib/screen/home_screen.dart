@@ -1,6 +1,5 @@
-import 'package:color_picker_app/providers/providers.dart';
 import 'package:color_picker_app/utils/utils.dart';
-import 'package:color_picker_app/widgets/random_color_button.dart';
+import 'package:color_picker_app/widgets/color_info_button.dart';
 import 'package:color_picker_app/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -40,7 +39,7 @@ class HomeScreen extends ConsumerWidget {
                 children: [
                   ColorSchemeDropdown(),
                   const SizedBox(width: 10),
-                  IconButton(onPressed: () {}, icon: Icon(Icons.info)),
+                  ColorInfoButton(),
                   const SizedBox(width: 10),
                   IconButton(
                     onPressed: () {},
