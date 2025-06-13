@@ -1,4 +1,5 @@
 import 'package:color_picker_app/utils/utils.dart';
+import 'package:color_picker_app/widgets/change_container_shape.dart';
 import 'package:color_picker_app/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -37,10 +38,7 @@ class HomeScreen extends ConsumerWidget {
                 children: [
                   ColorSchemeDropdown(),
                   ColorInfoButton(),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.circle_outlined),
-                  ),
+                  ChangeContainerShape(),
                 ],
               ),
               const SizedBox(height: 25),
