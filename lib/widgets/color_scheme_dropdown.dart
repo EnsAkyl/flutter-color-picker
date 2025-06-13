@@ -23,7 +23,14 @@ class ColorSchemeDropdown extends ConsumerWidget {
               value: scheme,
               child: Row(
                 children: [
-                  Container(width: 20, height: 20, color: primaryColor),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: primaryColor,
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                  ),
                   const SizedBox(width: 10),
 
                   Text(schemeName, style: context.textTheme.labelMedium),

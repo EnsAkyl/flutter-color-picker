@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class SelectedColorContainer extends ConsumerWidget {
+  const SelectedColorContainer({super.key});
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final deviceSize = context.deviceSize;
@@ -24,7 +26,7 @@ class SelectedColorContainer extends ConsumerWidget {
       height: deviceSize.height * 0.37,
 
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(20),
         color: containerColor,
       ),
     );

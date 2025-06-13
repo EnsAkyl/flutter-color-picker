@@ -4,13 +4,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 
 class SelectedColorName extends ConsumerWidget {
+  const SelectedColorName({super.key});
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final selectedScheme = ref.watch(selectedColorSchemeProvider);
     final selectedtColorName = colors[selectedScheme];
     final textTheme = context.textTheme;
-    if (selectedScheme == null)
-      return Text("Henüz Renk Seçilmedi", style: textTheme.labelLarge);
+    if (selectedScheme == null) return Text("Henüz Renk Seçilmedi", style: textTheme.labelLarge);
 
     return Text(
       "$selectedtColorName",
