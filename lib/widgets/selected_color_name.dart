@@ -9,8 +9,12 @@ class SelectedColorName extends ConsumerWidget {
     final selectedScheme = ref.watch(selectedColorSchemeProvider);
     final selectedtColorName = colors[selectedScheme];
     final textTheme = context.textTheme;
-    if (selectedScheme == null) return Text("Henüz Renk Seçilmedi", style: textTheme.labelLarge);
+    if (selectedScheme == null)
+      return Text("Henüz Renk Seçilmedi", style: textTheme.labelLarge);
 
-    return Text("$selectedtColorName", style: textTheme.labelLarge);
+    return Text(
+      "$selectedtColorName",
+      style: textTheme.labelLarge?.copyWith(fontSize: 20),
+    );
   }
 }

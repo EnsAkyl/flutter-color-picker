@@ -13,7 +13,7 @@ class SelectedColorContainer extends ConsumerWidget {
     Color containerColor;
 
     if (selectedColor == null) {
-      containerColor = Colors.black38;
+      containerColor = Colors.black12;
     } else {
       containerColor =
           FlexThemeData.light(scheme: selectedColor).colorScheme.primary;
