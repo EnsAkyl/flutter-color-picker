@@ -1,4 +1,7 @@
-import 'package:color_picker_app/utils/extensions.dart';
+import 'package:color_picker_app/providers/color_scheme_providers.dart';
+import 'package:color_picker_app/utils/utils.dart';
+import 'package:color_picker_app/widgets/widgets.dart';
+import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -11,6 +14,8 @@ class HomeScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final selectedScheme = ref.watch(selectedColorSchemeProvider);
+    final selectedColorName = colors[selectedScheme];
     final deviceSize = context.deviceSize;
     return Scaffold(
       appBar: AppBar(
@@ -27,23 +32,24 @@ class HomeScreen extends ConsumerWidget {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Center(
-          child: Column(
-            //mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                width: deviceSize.width * 0.70,
-                height: deviceSize.height * 0.37,
-              ),
-              const SizedBox(height: 10),
-              Text("White"),
+            child: Column(
+              //mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+            Container(
+            width: deviceSize.width * 0.70,
+              height: deviceSize.height * 0.37,
+            ),
+            const SizedBox(height: 10),
+            SelectedColorName(),
 
-              Row(
-                children: [DropdownButton(items: , onChanged: (value) {})],
-              ),
-            ],
-          ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [ColorSchemeDropdown()],
         ),
+        ],
       ),
+    ),)
+    ,
     );
   }
 }
