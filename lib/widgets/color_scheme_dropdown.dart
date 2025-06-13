@@ -5,6 +5,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 
 class ColorSchemeDropdown extends ConsumerWidget {
+  const ColorSchemeDropdown({super.key});
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final selectedScheme = ref.watch(selectedColorSchemeProvider);

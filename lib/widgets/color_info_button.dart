@@ -12,19 +12,18 @@ class ColorInfoButton extends ConsumerWidget {
     final colors = ref.watch(selectedColorSchemeProvider);
 
     final selectedColor =
-        FlexThemeData
-            .light(scheme: colors)
-            .colorScheme
-            .primary;
+        FlexThemeData.light(scheme: colors).colorScheme.primary;
 
     return IconButton(
       onPressed: () {
         if (colors == null) {
           ColorAlerts.displaySnackBar(context, "RGB: (0,0,0)");
+        } else {
+          ColorAlerts.displaySnackBar(
+            context,
+            "RGB: (${selectedColor.red}, ${selectedColor.green}, ${selectedColor.blue})",
+          );
         }
-        ColorAlerts.displaySnackBar(
-            context, "RGB: (${selectedColor.red}, ${selectedColor.green}, ${selectedColor.blue})"
-            );
       },
       icon: Icon(Icons.info),
     );
