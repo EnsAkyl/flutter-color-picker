@@ -17,6 +17,14 @@ class HomeScreen extends ConsumerWidget {
       appBar: AppBar(
         centerTitle: true,
         automaticallyImplyLeading: false,
+        /* actions: [
+          PopupMenuButton<String>(
+            itemBuilder: (context) {
+              return [PopupMenuItem(child: Row())];
+            },
+            //icon: Icon(Icons.more_vert),
+          ),
+        ],*/
         title: Text(
           "Colors Picker",
           style: context.textTheme.headlineSmall?.copyWith(
@@ -25,25 +33,29 @@ class HomeScreen extends ConsumerWidget {
           ),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(25.0),
-        child: Center(
-          child: Column(
-            children: [
-              SelectedColorContainer(),
-              const SizedBox(height: 10),
-              SelectedColorName(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ColorSchemeDropdown(),
-                  ColorInfoButton(),
-                  ChangeContainerShape(),
-                ],
-              ),
-              const SizedBox(height: 25),
-              RandomColorButton(),
-            ],
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(25.0),
+          child: Center(
+            child: Column(
+              children: [
+                SelectedColorContainer(),
+                const SizedBox(height: 20),
+                SelectedColorName(),
+                const SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    ColorSchemeDropdown(),
+                    ColorInfoButton(),
+                    ChangeContainerShape(),
+                  ],
+                ),
+                const SizedBox(height:20),
+                RandomColorButton(),
+
+              ],
+            ),
           ),
         ),
       ),
