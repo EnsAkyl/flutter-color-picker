@@ -19,6 +19,7 @@ Uygulama, seçilen tema doğrultusunda arayüzdeki Container widget'ının arka 
 
 #### 🌱 Uygulama Başlangıcı
 ![first_home_page.png](screenshots/first_home_page.png)
+
 Uygulama açıldığında kullanıcıya ilk görüntü.
 
 #### 🧾 Renklerin Dropdown Menüsü
