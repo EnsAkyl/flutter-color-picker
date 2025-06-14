@@ -17,22 +17,26 @@ Uygulama, seçilen tema doğrultusunda arayüzdeki Container widget'ının arka 
 
 ## 📱 Ekran Görüntüleri
 
-### Uygulama Başlangıcı
+#### 🌱 Uygulama Başlangıcı
 ![first_home_page.png](screenshots/first_home_page.png)
 Uygulama açıldığında kullanıcıya ilk görüntü.
 
-### Renklerin Dropdown Menüsü
+#### 🧾 Renklerin Dropdown Menüsü
 ![dropdown_menu.png](screenshots/dropdown_menu.png)
+
 flex_color_scheme paketindeki renk temalarının listelendiği dropdown.
 
-### Seçilen Rengin Görünümü
+#### 💻 Seçilen Rengin Görünümü
 ![selected_color_home_page.png](screenshots/selected_color_home_page.png)
+
 Dropdown menüden ya da rastgele renk butonundan seçim yapıldığında rengin görünümü.
 
-### RGB Kodunun SnackBar ile Gösterimi
+#### ℹ️ RGB Kodunun SnackBar ile Gösterimi
 ![snackbar_info.png](screenshots/snackbar_info.png)
+
 İnfo ikonuna basarak seçilen rengin RGB kodunun SnackBar ile gösterilmesi.
 
-### İkon Butonla Container Şekli Değiştirme
+#### ⚪/⬜ İkon Butonla Container Şekli Değiştirme
 ![container_shape.png](screenshots/container_shape.png)
-İkon buton() kullanılarak, rengin gösterildiği Container'ın şeklinin daire veya kare olarak değiştirilmesi.
+
+Daire/Kare ikon butonu kullanılarak, rengin gösterildiği Container'ın şeklinin daire veya kare olarak değiştirilmesi.
